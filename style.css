@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 15px 15px;
+    padding: 0px 15px 15px;
 }
 .weather-search-box {
     width: 100%;
@@ -89,7 +89,6 @@
 }
 
 .location {
-    padding-top: 30px;
     text-align: center;
     color: #fff;
     font-weight: 700;
@@ -129,7 +128,7 @@
     display: none;
 }
 .prognosis-last-five-day {
-    padding-top: 100px;
+    padding-top: 40px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -137,7 +136,7 @@
     gap: 2px;
 }
 .date {
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 }
 .day {
     padding-top: 50px;
