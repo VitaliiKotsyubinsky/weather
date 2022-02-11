@@ -12,7 +12,7 @@ function setQuery(evt) {
 
 
 function getResults(query) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=fbd1c187f058db0d48e533deb9ed41aa`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&cnt=3&units=metric&appid=fbd1c187f058db0d48e533deb9ed41aa`)
         .then(weather => {
             return weather.json()
         }).then(displayResults)

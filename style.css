@@ -136,10 +136,11 @@
     gap: 2px;
 }
 .date {
-    padding-bottom: 20px;
+    padding: 10px;
+    line-height: 30px;
 }
 .day {
-    padding: 30px;
+    padding: 10px;
     border: 1px solid #ffff;
     border-radius: 25px;
     max-width: 295px;
