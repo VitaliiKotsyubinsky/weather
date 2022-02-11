@@ -139,10 +139,10 @@
     padding-bottom: 20px;
 }
 .day {
-    padding-top: 50px;
+    padding: 30px;
     border: 1px solid #ffff;
     border-radius: 25px;
-    width: 295px;
+    max-width: 295px;
     box-shadow: 4px 37px 29px 1px rgba(34, 60, 80, 0.4);
     background-color: rgba(255, 255, 255, 0.5);
 }
