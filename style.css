@@ -89,6 +89,7 @@
 }
 
 .location {
+    height: 330px;
     text-align: center;
     color: #fff;
     font-weight: 700;
@@ -135,7 +136,7 @@
     text-align: center;
     gap: 2px;
 }
-.date {
+.dates {
     padding: 10px;
     line-height: 30px;
 }
@@ -143,21 +144,21 @@
     padding: 10px;
     border: 1px solid #ffff;
     border-radius: 25px;
-    max-width: 295px;
+    max-width: 242px;
     box-shadow: 4px 37px 29px 1px rgba(34, 60, 80, 0.4);
     background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
 }
 .day:hover {
     transform: scale(1.2);
-    transition: 0.2s;
 }
-.temp {
+.temps {
     font-size: 60px;
 }
-.weather {
+.weathers {
     padding-top: 15px;
 }
-.hi-low {
+.hi-lows {
     padding-top: 20px;
     padding-bottom: 20px;
 }
