@@ -66,6 +66,7 @@ function displayResults(weather) {
     for (let i = 1; i < 5; i++) {
         let { dt_txt, main: { temp, temp_max, temp_min }, weather: [{ icon, description }] } = forecastData[i][5]
         temp = Math.round(temp)
+        dt_txt = dt_txt.slice(0, 10)
         myForecastData.push({ dt_txt, temp, icon, temp_max, temp_min, description })
     }
 
@@ -80,35 +81,33 @@ function displayResults(weather) {
         `
     }
 
-    // const newDt = dt_xt.slice(11)
     const myThreeHours = []
-
     for (let i = 1; i <= 3; i++) {
-
         let { dt_txt, main: { temp }, weather: [{ icon }] } = weather.list[i]
         temp = Math.round(temp)
         dt_txt = dt_txt.slice(11, 16)
         myThreeHours.push({ dt_txt, temp, icon })
 
-
     }
-
 
     const tempHoursDivs = document.querySelectorAll('.temp-hours')
     for (let i = 0; i < myThreeHours.length; i++) {
-
-
         const { dt_txt, temp, icon } = myThreeHours[i]
         tempHoursDivs[i].innerHTML = `
             <div class="temp-hours">${dt_txt} - ${temp}°c
             <img src="http://openweathermap.org/img/wn/${icon}@2x.png">
-            </div>     
-            
-            
-        `
+            </div>`
     }
 
-
+    function backgroundСhange() {
+        let time = weather.list[0].dt_txt.slice(11, 13)
+        if (time <= 18) {
+            document.querySelector('.weather-wrapper').style.backgroundImage = 'url(/img/minimalizm-gora-gory-mesiats-peizazh-les-iolki-zvezdy-tuman_\(1\)-1024x576-MM-90.jpg)'
+        } else {
+            document.querySelector('.weather-wrapper').style.backgroundImage = 'url(./img/mountains-minimalism-1172552-wallhere.com.jpg)'
+        }
+        return backgroundСhange
+    }
 
 
     return obj

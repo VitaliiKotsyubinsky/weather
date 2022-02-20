@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     padding: 0px 15px 80px;
+    position: relative;
 }
 .weather-search-box {
     width: 100%;
@@ -149,7 +150,7 @@
     padding: 10px;
     border: 5px solid #ffff;
     border-radius: 25px;
-    max-width: 242px;
+    min-width: 300px;
     box-shadow: 4px 37px 29px 1px rgba(34, 60, 80, 0.4);
     background-color: rgba(255, 255, 255, 0.5);
     transition: 0.2s;
@@ -166,6 +167,11 @@
 .hi-lows {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+.time {
+    position: absolute;
+    top: 120px;
+    font-size: 30px;
 }
 
 @media (max-width: 667px) {
