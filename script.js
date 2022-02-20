@@ -99,15 +99,7 @@ function displayResults(weather) {
             </div>`
     }
 
-    function backgroundСhange() {
-        let time = weather.list[0].dt_txt.slice(11, 13)
-        if (time <= 18) {
-            document.querySelector('.weather-wrapper').style.backgroundImage = 'url(/img/minimalizm-gora-gory-mesiats-peizazh-les-iolki-zvezdy-tuman_\(1\)-1024x576-MM-90.jpg)'
-        } else {
-            document.querySelector('.weather-wrapper').style.backgroundImage = 'url(./img/mountains-minimalism-1172552-wallhere.com.jpg)'
-        }
-        return backgroundСhange
-    }
+
 
 
     return obj
