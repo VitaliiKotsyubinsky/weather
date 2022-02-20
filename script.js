@@ -25,7 +25,6 @@ function displayResults(weather) {
     let city = document.querySelector('.location .city')
     city.innerText = `${weather.city.name}, ${weather.city.country}`
 
-    console.log(weather)
     let now = new Date()
     let date = document.querySelector('.location .main-date')
     date.innerText = dateBuilder(now)
@@ -34,7 +33,7 @@ function displayResults(weather) {
     temp.innerHTML = `${Math.round(weather.list[0].main.temp)}<span>°c</span >`
 
     let hilow = document.querySelector('.location .main-hi-low ')
-    hilow.innerText = `${weather.list[0].main.temp_min}°c / ${weather.list[0].main.temp_max} °c`
+    hilow.innerText = `min ${Math.round(weather.list[0].main.temp_min)}°c / max ${Math.round(weather.list[0].main.temp_max)} °c`
 
     let icon = document.querySelector('.location .weather-icon')
     icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${weather.list[0].weather[0]['icon']}@2x.png">`
@@ -80,6 +79,38 @@ function displayResults(weather) {
             <div class="weathers">${description}</div>          
         `
     }
+
+    // const newDt = dt_xt.slice(11)
+    const myThreeHours = []
+
+    for (let i = 1; i <= 3; i++) {
+
+        let { dt_txt, main: { temp }, weather: [{ icon }] } = weather.list[i]
+        temp = Math.round(temp)
+        dt_txt = dt_txt.slice(11, 16)
+        myThreeHours.push({ dt_txt, temp, icon })
+
+
+    }
+
+
+    const tempHoursDivs = document.querySelectorAll('.temp-hours')
+    for (let i = 0; i < myThreeHours.length; i++) {
+
+
+        const { dt_txt, temp, icon } = myThreeHours[i]
+        tempHoursDivs[i].innerHTML = `
+            <div class="temp-hours">${dt_txt} - ${temp}°c
+            <img src="http://openweathermap.org/img/wn/${icon}@2x.png">
+            </div>     
+            
+            
+        `
+    }
+
+
+
+
     return obj
 
 }
@@ -93,11 +124,17 @@ function dateBuilder(d) {
     let month = months[d.getMonth()];
     let year = d.getFullYear();
 
+
     return `${day} ${date} ${month} ${year} `;
 }
 
-
-
+let timeNow = document.querySelector('.time')
+function getCurrentTimeString() {
+    return new Date().toTimeString().replace(/ .*/, '')
+}
+setInterval(
+    () => timeNow.innerHTML = getCurrentTimeString(), 1000
+)
 
 
 

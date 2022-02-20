@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="#">
     <script src="./main.js" defer></script>
     <script src="./script.js" defer></script>
+
+
     <title>Weather app</title>
 </head>
 
@@ -22,8 +24,9 @@
             <header class="header">
                 <input type="text" autocomplete="off" class="weather-search-box" placeholder="Search for a city"
                     id="weather-search-box">
+                <div class="time"></div>
             </header>
-            <div class="select is-active">
+            <!-- <div class="select is-active">
                 <div class="select__header">
                     <span class="select__current"></span>
                     <div class="select__icon">&times;</div>
@@ -32,7 +35,7 @@
                     <div class="select__item">next five days</div>
                     <div class="select__item">next three hours</div>
                 </div>
-            </div>
+            </div> -->
             <main class="main">
                 <section class="location">
                     <div class="city"></div>
@@ -44,6 +47,17 @@
                     <div class="main-hi-low"></div>
                     <div class="main-date"></div>
                 </section>
+                <div class="hours-block">
+                    <div class="temp-hours">
+
+                    </div>
+                    <div class="temp-hours">
+
+                    </div>
+                    <div class="temp-hours">
+
+                    </div>
+                </div>
             </main>
 
 
@@ -57,6 +71,7 @@
                         </div>
                         <div class="weathers">Sunny</div>
                         <div class="hi-low">18°c / 21°c</div>
+                        <button name=""></button>
                     </div>
                     <div class="day">
                         <div class="dates">Tuesday 8 February 2022</div>
@@ -83,6 +98,7 @@
                         <div class="hi-lows">18°c / 21°c</div>
                     </div>
                 </div>
+
 
             </footer>
         </div>

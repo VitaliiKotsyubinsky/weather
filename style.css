@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 15px 15px;
+    padding: 0px 15px 80px;
 }
 .weather-search-box {
     width: 100%;
@@ -36,10 +36,11 @@
     width: 250px;
     position: relative;
     color: #fff;
+    display: none;
 }
 
 .select.is-active .select__body {
-    display: block;
+    display: none;
 }
 .select__header {
     border: 1px solid #ccc;
@@ -83,17 +84,20 @@
 }
 
 .main {
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-}
-
-.location {
-    height: 330px;
-    text-align: center;
     color: #fff;
     font-weight: 700;
     text-shadow: 5px 6px 4px rgba(3, 2, 5, 0.84);
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    border: solid 5px;
+    padding: 30px;
+}
+
+.hours-block {
+    line-height: 80px;
+    font-size: 30px;
 }
 
 .city {
@@ -128,8 +132,9 @@
 .for-three-hours {
     display: none;
 }
+
 .prognosis-last-five-day {
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -142,7 +147,7 @@
 }
 .day {
     padding: 10px;
-    border: 1px solid #ffff;
+    border: 5px solid #ffff;
     border-radius: 25px;
     max-width: 242px;
     box-shadow: 4px 37px 29px 1px rgba(34, 60, 80, 0.4);
